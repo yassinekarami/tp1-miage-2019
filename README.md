@@ -100,6 +100,9 @@ Pour les besoins du TP, nous utilisons ici les notions de Scenario Outline, de D
 
 5) Ecrire un scenario simple au format textuel et les steps correspondants.
 
+# Finalisation
+Veuillez finaliser, vérifier votre code et vos réponses après le TP. Vous avez deux semaines avant cloture du projet.
+
 # Cleanup
 Si vous le désirez, vous pourrez supprimer votre projet github mais pas avant fin juin (noté)
 
