@@ -50,8 +50,8 @@ public static void main(String[] args) {
 ```
 Conception :
 
-![diag sequence](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/bflorat/tp1-miage/master/diag1.puml&ttt=1)
-![diag classe](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/bflorat/tp1-miage/master/diag2.puml&ttt=1)
+![diag sequence](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/bflorat/tp1-miage-2019/master/diag1.puml&ttt=1)
+![diag classe](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/bflorat/tp1-miage-2019/master/diag1.puml&ttt=1)
 
 Prévoir une cinquième couche `commun` pour les éléments communs à toutes les couches comme les exceptions. 
 
