@@ -20,6 +20,7 @@ Nous fournissons trois projets Eclipse servant de base de travail aux exercices 
 * Le projet ex1-ini est le code initial du TP et sert de base aux exercices 1 et 2. Une fois terminés, faire un push vers Github et fermer le projet Eclipse (ne pas le supprimer).
 * Le projet ex3-ini sert de code de base aux exercices 3 et 4. Une fois terminés, faire un push vers Github et fermer le projet Eclipse (ne pas le supprimer).
 * Le projet ex5-ini sert de code de base à l'exercice 5. Une fois terminé faire un push vers Github.
+* Dans Eclipse, faire File -> Import -> Import existing Maven project et cocher le projet à importer
 
 # Exercice 1 - Refactoring
 _Temps estimé : 20 mins_
