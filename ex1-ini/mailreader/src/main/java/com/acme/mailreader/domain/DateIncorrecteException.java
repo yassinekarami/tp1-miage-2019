@@ -1,4 +1,4 @@
-package com.acme.mailreader.utils;
+package com.acme.mailreader.domain;
 
 public class DateIncorrecteException extends Exception {
 
