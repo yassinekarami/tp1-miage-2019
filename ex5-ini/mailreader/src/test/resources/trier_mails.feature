@@ -21,6 +21,7 @@ Examples:
 | true       | false	  | PAS_ENVOYE | LU      | aaaaa			| bbbbbb 		| 2017-01-01T14:03:00Z | 2017-01-01T14:03:34Z | MAIL1_AVANT |  
 | true       | true	      | PAS_ENVOYE | LU      | aaaaa			| bbbbbb 		| 2017-01-01T14:03:00Z | 2017-01-01T14:03:34Z | MAIL1_APRES |
 | true       | true	      | LU		   | LU      | aaaaa			| aaaaa 		| 2017-01-01T14:03:00Z | 2017-01-01T14:03:34Z | MAIL1_APRES | 
+| false      | false	  | ENVOYE     | LU      | aaaaa	        | ccccc	        | 2017-01-01T14:03:00Z | 2017-01-01T14:03:34Z | MAIL1_APRES | 
     
     
 Scenario: ordre d'une liste de mails

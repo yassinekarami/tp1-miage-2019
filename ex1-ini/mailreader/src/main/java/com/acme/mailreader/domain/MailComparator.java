@@ -10,27 +10,46 @@ import java.util.Comparator;
  */
 public class MailComparator implements Comparator<Mail> {
 
-	public int compare(Mail obj1, Mail obj2) {
-		
-		int resultat = 0;
-		
-		if (obj1 == null || obj2 == null) {
-			resultat = 0;
-		}else if (obj1.isImportant() != obj2.isImportant()) {
-			if (obj1.isImportant() && !obj2.isImportant()) {
-				resultat = -1;
-			} else {
-				resultat = 1;
-			}
-		}else if (obj1.getStatut() != obj2.getStatut()) {
-			int comp = obj1.getStatut().ordinal()
-					- obj2.getStatut().ordinal();
-			resultat = comp > 0 ? -1 : 1;
-		}else if (obj1.getSujet() != obj2.getSujet()) {
-			resultat = obj2.getSujet().compareTo(obj1.getSujet());
+	public static final int M1SUPM2 = 1;
+	public static final int M2SUPM1 = -1;
+	public static final int M1EQUM2 = 0;
+	
+	public int compare(Mail mail1, Mail mail2) {
+		int result;
+		if (mail1 == null || mail2 == null) {
+			result = M1EQUM2;
+		}else if (mail1.getSujet() != mail2.getSujet()) {
+			result = mail2.getSujet().compareTo(mail1.getSujet());
+		}else if (mail1.getStatut() != mail2.getStatut()) {
+			result = this.comparerMailLePlusImportant(mail1,mail2);
+		}else if (mail1.isImportant() != mail2.isImportant()) {
+			result = this.getMailImportant(mail1, mail2);
+		}else {
+			result =  mail1.getDate().compareTo(mail2.getDate());
 		}
-		resultat = obj2.getDate().compareTo(obj1.getDate());
-		return resultat;
+		return result;
+	}
+
+	private int comparerMailLePlusImportant(Mail mail1, Mail mail2) {
+		int result;
+
+		if(mail1.getStatut().ordinal()- mail2.getStatut().ordinal()>M1EQUM2) {
+			result = M1SUPM2;
+		}else {
+			result = M2SUPM1;
+		}
+		
+		return result;
+	}
+	
+	private int getMailImportant(Mail mail1, Mail mail2) {
+		int result;
+		if (mail1.isImportant() && !mail2.isImportant()) {
+			result = M1SUPM2;
+		} else {
+			result =  M2SUPM1;
+		}
+		return result;
 	}
 	
 	

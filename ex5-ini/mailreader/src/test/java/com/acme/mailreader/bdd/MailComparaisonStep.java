@@ -65,11 +65,22 @@ public class MailComparaisonStep {
 		this.resultatComparaison = comparator.compare(mail1, mail2);
 	}
 
+	public static Object getKeyFromValueInMap(Map hm, Object value) {
+		Object result = null;
+		
+		for (Object o : hm.keySet()) {
+			if (hm.get(o).equals(value)) {
+				result = o;
+				break;
+			}
+		}
+		return result;
+	}
+	
 	@Then("^le tri doit retourner \"([^\"]*)\"$")
 	public void le_tri_doit_retourner(int resu) throws Throwable {
-		//TODO
-		//assertThat(...);
-		assertEquals(  resultatComparaison, resu);
+		assertThat(comparator.compare(this.mail1, this.mail2), is(getKeyFromValueInMap(resuAsString,resu)));
+
 	}
 	
 
